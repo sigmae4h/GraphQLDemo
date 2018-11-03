@@ -37,4 +37,7 @@ dependencies {
 
     // https://mvnrepository.com/artifact/com.graphql-java/graphiql-spring-boot-starter
     compile group: 'com.graphql-java', name: 'graphiql-spring-boot-starter', version: '5.0.2'
+
+	// https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter-test
+	testCompile group: 'com.graphql-java', name: 'graphql-spring-boot-starter-test', version: '5.0.2'
 }
