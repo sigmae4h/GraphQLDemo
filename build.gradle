@@ -1,0 +1,40 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-web')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+    // https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter
+    compile group: 'com.graphql-java', name: 'graphql-spring-boot-starter', version: '5.0.2'
+
+    // https://mvnrepository.com/artifact/com.graphql-java/graphql-java-tools
+    compile group: 'com.graphql-java', name: 'graphql-java-tools', version: '5.2.4'
+
+    // https://mvnrepository.com/artifact/com.graphql-java/graphiql-spring-boot-starter
+    compile group: 'com.graphql-java', name: 'graphiql-spring-boot-starter', version: '5.0.2'
+}
